@@ -1,0 +1,279 @@
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+}
+header{
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.left-header{
+    display: flex;
+    justify-content: space-around;
+}
+.left-header div{margin: 1rem}
+
+.burger-line{
+    display: block;
+    padding: 1px;
+    width: 2rem;
+    height: 0.2rem;
+    background-color: #fff;
+    border-radius: 40px;
+    margin: 0.6rem;
+    justify-content: space-evenly;
+}
+
+.menu-lists ul{
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.menu-lists ul li{margin: 0.5rem}
+
+.cnn-motto{
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-header{
+    display: flex;
+    justify-content: space-around;
+}
+.right-header div{
+    margin: 1rem;
+}
+
+
+.top-headlines{
+    display: flex;
+    width: 100%;
+    font-size: 0.7rem;
+    margin: 1rem;
+}
+
+.headline{
+    display: flex;
+}
+
+.updates{
+    display: flex;
+}
+.left-updates{
+    margin:1rem;
+}
+.left-update-top-headline{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.img1{
+    max-width: 100%;
+}
+.left-updates .para{
+    font-weight: bolder;
+    font-size: 1.2rem;
+
+}
+.laft p{color: black;}
+
+.middle-updates{
+    margin: 1rem;
+}
+.middle-updates .pa{
+    font-weight: bolder;
+    font-size: 1rem;
+
+}
+.m1 p{
+    color: black;
+
+}
+.right-updates{
+    margin: 1rem;
+}
+.right-updates .para{
+    
+        font-weight: bold;
+        font-size: 1rem;
+    
+    
+}
+.r p{
+    color: black;
+}
+.img2{
+    max-width: 100%;
+
+}
+.img3{
+    max-width: 100%;
+
+}
+
+.imgg1{
+    max-width: 90%;
+    margin: 1rem;
+}
+.i1{
+    max-width: 90%;
+    margin: 1rem;
+
+}
+.i2{
+    max-width: 30%;
+}
+.i3{
+    max-width: 30%;
+}
+.img69{
+    max-width: 100%;
+    margin: 0.5rem;
+}
+.img9{
+    max-width: 100%;
+}
+.img699{
+    max-width: 100%;
+}
+
+
+.categories{
+    display: flex;
+}
+.news-buzz{
+    margin: 1rem;
+}
+.categories-heading{
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: lightgray;
+    margin: 1rem;
+}
+.npara{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    margin: 0.2rem;
+}
+.flaft{
+    display: flex;
+    
+}
+.featured{
+    margin: 1rem;
+}
+
+.f-heading{
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: lightgray;
+    margin: 1rem;
+}
+.s-heading{
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: lightgray;
+    margin: 1rem;
+}
+.fpara{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    margin: 0.2rem;
+}
+.ft1{
+    display: flex;
+    margin: 1rem;
+}
+
+.ft1p{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.Spotlight{
+    margin: 1rem;
+
+}
+.slaft{
+    margin: 1rem;
+}
+
+.s9{
+    margin-left: 1rem;
+}
+
+.f{
+    background-color: black !important;
+
+}
+.fot{
+    display: flex;
+    max-width: 100%;
+    margin: 1rem;
+    justify-content: space-evenly;
+}
+.fl li a{
+    color: white;
+
+}
+.fot-m{
+    display: flex;
+    max-width: 100%;
+    margin: 1rem;
+    justify-content: space-around;
+    
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+}
+.input-s{
+    height: 2rem ;
+}
+.footer-soc{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.fsi{
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    margin: 1rem ;
+}
+.footbot{
+    display: flex;
+}
+
+/* Media queries */
+
+@media screen and (max-width:601px) {
+    .updates{display: none;}
+    .categories{display: flex; flex-direction: column; font-size: 2rem ;}
+    .right-header{display: none;}
+    .menu-lists{display: none;}
+    .top-headlines{display: flex; flex-direction: column; font-size: 1.75rem ;}
+    .headline{display: flex; flex-direction: column; font-size: 1.75rem ;}
+    .fot{display: flex; flex-direction: column; font-size: 2rem ;}
+    .fot-m{display: flex; flex-direction: column; font-size: 2rem ;}
+    .footbot{display: flex; flex-direction: column; font-size: 2rem ;}
+    .fl{display: block;}
+
+
+    
+}
