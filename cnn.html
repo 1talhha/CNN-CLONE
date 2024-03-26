@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN CLONE</title>
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+
+<style>   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    }
+    header{
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: black;
+        color: white;
+    }
+    .left-header{
+        display: flex;
+        justify-content: space-around;
+    }
+    .left-header div{margin: 1rem}
+    
+    .burger-line{
+        display: block;
+        padding: 1px;
+        width: 2rem;
+        height: 0.2rem;
+        background-color: #fff;
+        border-radius: 40px;
+        margin: 0.6rem;
+        justify-content: space-evenly;
+    }
+    
+    .menu-lists ul{
+        display: flex;
+        justify-content: space-evenly; 
+    }
+    
+    .menu-lists ul li{margin: 0.5rem}
+    
+    .cnn-motto{
+        background-color: red;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .right-header{
+        display: flex;
+        justify-content: space-around;
+    }
+    .right-header div{
+        margin: 1rem;
+    }
+    
+    
+    .top-headlines{
+        display: flex;
+        width: 100%;
+        font-size: 0.7rem;
+        margin: 1rem;
+    }
+    
+    .headline{
+        display: flex;
+    }
+    
+    .updates{
+        display: flex;
+    }
+    .left-updates{
+        margin:1rem;
+    }
+    .left-update-top-headline{
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    .img1{
+        max-width: 100%;
+    }
+    .left-updates .para{
+        font-weight: bolder;
+        font-size: 1.2rem;
+    
+    }
+    .laft p{color: black;}
+    
+    .middle-updates{
+        margin: 1rem;
+    }
+    .middle-updates .pa{
+        font-weight: bolder;
+        font-size: 1rem;
+    
+    }
+    .m1 p{
+        color: black;
+    
+    }
+    .right-updates{
+        margin: 1rem;
+    }
+    .right-updates .para{
+        
+            font-weight: bold;
+            font-size: 1rem;
+        
+        
+    }
+    .r p{
+        color: black;
+    }
+    .img2{
+        max-width: 100%;
+    
+    }
+    .img3{
+        max-width: 100%;
+    
+    }
+    
+    .imgg1{
+        max-width: 90%;
+        margin: 1rem;
+    }
+    .i1{
+        max-width: 90%;
+        margin: 1rem;
+    
+    }
+    .i2{
+        max-width: 30%;
+    }
+    .i3{
+        max-width: 30%;
+    }
+    .img69{
+        max-width: 100%;
+        margin: 0.5rem;
+    }
+    .img9{
+        max-width: 100%;
+    }
+    .img699{
+        max-width: 100%;
+    }
+    
+    
+    .categories{
+        display: flex;
+    }
+    .news-buzz{
+        margin: 1rem;
+    }
+    .categories-heading{
+        font-weight: bold;
+        font-size: 1.2rem;
+        background-color: lightgray;
+        margin: 1rem;
+    }
+    .npara{
+        font-weight: bolder;
+        font-size: 1.2rem;
+        margin: 0.2rem;
+    }
+    .flaft{
+        display: flex;
+        
+    }
+    .featured{
+        margin: 1rem;
+    }
+    
+    .f-heading{
+        font-weight: bold;
+        font-size: 1.2rem;
+        background-color: lightgray;
+        margin: 1rem;
+    }
+    .s-heading{
+        font-weight: bold;
+        font-size: 1.2rem;
+        background-color: lightgray;
+        margin: 1rem;
+    }
+    .fpara{
+        font-weight: bolder;
+        font-size: 1.2rem;
+        margin: 0.2rem;
+    }
+    .ft1{
+        display: flex;
+        margin: 1rem;
+    }
+    
+    .ft1p{
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .Spotlight{
+        margin: 1rem;
+    
+    }
+    .slaft{
+        margin: 1rem;
+    }
+    
+    .s9{
+        margin-left: 1rem;
+    }
+    
+    .f{
+        background-color: black !important;
+    
+    }
+    .fot{
+        display: flex;
+        max-width: 100%;
+        margin: 1rem;
+        justify-content: space-evenly;
+    }
+    .fl li a{
+        color: white;
+    
+    }
+    .fot-m{
+        display: flex;
+        max-width: 100%;
+        margin: 1rem;
+        justify-content: space-around;
+        
+    }
+    .search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 3rem;
+    }
+    .input-s{
+        height: 2rem ;
+    }
+    .footer-soc{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 2rem;
+    }
+    
+    .fsi{
+        display: flex;
+        justify-content: center;
+        align-items: right;
+        margin: 1rem ;
+    }
+    .footbot{
+        display: flex;
+    }
+    
+    /* Media queries */
+    
+    @media screen and (max-width:601px) {
+        .updates{display: none;}
+        .categories{display: flex; flex-direction: column; font-size: 2rem ;}
+        .right-header{display: none;}
+        .menu-lists{display: none;}
+        .top-headlines{display: flex; flex-direction: column; font-size: 1.75rem ;}
+        .headline{display: flex; flex-direction: column; font-size: 1.75rem ;}
+        .fot{display: flex; flex-direction: column; font-size: 2rem ;}
+        .fot-m{display: flex; flex-direction: column; font-size: 2rem ;}
+        .footbot{display: flex; flex-direction: column; font-size: 2rem ;}
+        .fl{display: block;}
+    
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="left-header">
+            <div class="logo">
+                <label for="">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </label>
+            </div>
+
+            <div class="menu-lists"> 
+                <ul>
+                    <li class="cnn-motto">CNN</li>
+                    <li>US</li>
+                    <li>World</li>
+                    <li>Politics</li>
+                    <li>Business</li>
+                    <li>Opinion</li>
+                    <li>Health</li>
+                    <li>Entertainment</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="right-header">
+            <div class="audio-btn">Watch</div>
+            <div class="search-btn">Listen</div>
+            <div class="log-in">Sign in</div>
+
+        </div>
+    </header>
+      
+    <section class="top-headlines">
+
+        <div class="headline">
+           
+            <h1 class="headline-title">  Tiktok  | </h1>   
+            <h1 class="headline-title">  India’s ‘Silicon Valley’ running dry |</h1>
+            <h1 class="headline-title">  Fani willis |</h1>
+            <h1 class="headline-title">  McDonald’s hit by global IT failure |</h1>
+            <h1 class="headline-title">  Travis Scott | </h1>
+            <h1 class="headline-title">  Travis Scott | </h1>
+            <h1 class="headline-title">  Travis Scott | </h1>
+            <h1 class="headline-title">  Iceland Volcano | </h1>
+            <h1 class="headline-title">  Fani willis </h1>
+        </div>
+    </section>
+    <section class="updates">
+        <div class="left-updates">
+            <h1 class="left-update-top-headline">
+                Trump has made Jan. 6 central to his campaign
+            </h1>
+            <img src="./Pics/20240309-trump-biden-rally-030924.jpg"
+            alt="trump-biden" 
+            class="img1">
+            <p class="para">
+                The former president keeps talking about Jan.6 
+                and his aides aren’t stopping him. 
+            </p>
+            <div class="left-headline">
+                <div class="laft">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="laft">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="laft">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="laft">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+            </div>
+
+
+        </div>
+        <div class="middle-updates">
+            <img src="./Pics/gettyimages-2071907990-20240316024415745.jpg" alt="" class="img2">
+            <p class="pa">
+                Trump has made Jan. 6 central to his campaign
+            </p>
+            <div class="middle-up">
+                <div class="m1">
+                    <p>
+                        • Live Updates: Congressional GOP eager to give Trump more January 6 fodde
+
+                    </p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="m1">
+                    <p>
+                        • Live Updates: Congressional GOP eager to give Trump more January 6 fodde
+                    </p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="m1">
+                    <p>
+                        • Live Updates: Congressional GOP eager to give Trump more January 6 fodde
+
+                    </p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+            </div>
+        </div>
+        <div class="right-updates">
+            <img src="./Pics/abc.jpeg"
+            alt="trump-biden" 
+            class="img3">
+            <p class="para">
+                The former president keeps talking about Jan.6 
+                and his aides aren’t stopping him. 
+            </p>
+            <div class="r-headline">
+                <div class="r">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="r">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="r">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="r">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="categories">
+        <div class="news-buzz">
+            <h1 class="categories-heading">
+                News and Buzz
+            </h1>
+            <img src="./Pics/putin.jpeg"
+            alt="trump-biden" 
+            class="imgg1">
+            <p class="npara">
+                The former president keeps talking about Jan.6 
+                and his aides aren’t stopping him. 
+            </p>
+            <div class="n-headline">
+                <div class="nlaft">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="nnlaft">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="nn2laft">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="nn3laft">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="nn4laft">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+                <div class="nn5laft">
+                    <p>The former president keeps talking about Jan. 6 and
+                    his aides aren’t stopping him. Biden is pouncing on that.</p>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+            </div>
+        </div>
+        <div class="featured">
+                <h1 class="f-heading">
+                    Featured
+                </h1>
+                <img src="./Pics/golf.jpg"
+                alt="trump-biden" 
+                class="i1">
+                <p class="fpara">
+                    The former president keeps talking about Jan.6 
+                    and his aides aren’t stopping him. 
+                </p>
+                <div class="f-headline">
+                    <div class="flaft one">
+                        <div class="ft1">
+                            <img src="./Pics/an.jpg"
+                            alt="trump-biden" class="i2">
+                        <div>
+                        <p class="ft1p">The former president keeps talking about Jan. 6 and
+                        his aides aren’t stopping him. Biden is pouncing on that.</p>
+                        
+                        </div>
+                        
+                        </div>
+                        
+                    </div>
+                    <hr style="width:100%; text-align: left
+                        margin-left 0;">
+                    <div class="flaft two">
+                        <div class="ft1">
+                            <img src="./Pics/ea.jpg"
+                            alt="trump-biden" class="i3">  
+                        <div>
+                        <p class="ft1p">The former president keeps talking about Jan. 6 and
+                        his aides aren’t stopping him. Biden is pouncing on that.</p>
+                        
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <hr style="width:100%; text-align: left
+                        margin-left 0;">
+        </div>      
+        <div class="Spotlight">
+                <h1 class="s-heading">
+                    Spotlight
+                </h1>
+                <div class="s-headline">
+                    <div class="slaft one">
+                        <div class="ft">
+                            <img src="./Pics/f4.jpg" alt="" class="img69">
+                            <div>
+                                <p class="s9">The former president keeps talking about Jan. 6 and
+                                his aides aren’t stopping him. Biden is pouncing on that.</p>
+                                
+                            </div>
+                        
+
+                        </div>
+                        <hr style="width:100%; text-align: left
+                        margin-left 0;">
+                       
+
+                    </div>
+                    <div class="slaft two">
+                        <div class="ft">
+                            <img src="./Pics/f5.jpg" alt="" class="img9">
+                        
+                        <div>
+                            <p class="s9">The former president keeps talking about Jan. 6 and
+                            his aides aren’t stopping him. Biden is pouncing on that.</p>
+                            
+                        </div>
+                    </div>
+                    <hr style="width:100%; text-align: left
+                            margin-left 0;">
+                    </div>
+
+                    <div class="slaft three">
+                        <div class="ft">
+                            <img src="./Pics/f6.jpg" alt="" class="img699">
+                        
+                        <div>
+                            <p class="s9">The former president keeps talking about Jan. 6 and
+                            his aides aren’t stopping him. Biden is pouncing on that.</p>
+                            
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <hr style="width:100%; text-align: left
+                    margin-left 0;">
+                </div>
+        </div>    
+    </section>
+
+    <footer class="f">
+        <div class="search" style="margin-top: 3rem;">
+            <input class="input-s" type="text" 
+            placeholder="Search CNN... " style="width: 90%;">
+            </input>
+        </div>
+
+        <div class="fot">
+            <div class="lf">
+                <h2><a href="#" style="color: white;">World</a></h2>
+                <ul class="fl">
+                    <li><a href="#" style="color:white ;">pak</a></li>
+                    <li><a href="#" style="color: white;">ind</a></li>
+                    <li><a href="#" style="color: white;">canada</a></li>
+                    <li><a href="#" style="color: white;">us</a></li>
+                    <li><a href="#" style="color: white;">uk</a></li>
+                    <li><a href="#" style="color: white;">usa</a></li>
+                    <li><a href="#" style="color: white;">maldives</a></li>
+                    <li><a href="#" style="color: white;">sa</a></li>
+                    <li><a href="#" style="color: white;">ireland</a></li>
+                </ul>
+            </div>
+
+            <div class="ls">
+                <h2><a href="#" style="color: white;">US politics</a></h2>
+                <ul class="fl">
+                    <li><a href="#" style="color: white;">abx</a></li>
+                    <li><a href="#" style="color: white;">zxc</a></li>
+                    <li><a href="#" style="color: white;">mnbv</a></li>
+                </ul>
+            </div>
+
+            <div class="lt">
+                <h2><a href="#" style="color: white;">business</a></h2>
+                <ul class="fl">
+                    <li><a href="#" style="color:white ;">markets</a></li>
+                    <li><a href="#" style="color: white;">media </a></li>
+                    <li><a href="#" style="color:white ;">success</a></li>
+                    <li><a href="#" style="color: white;">respectives</a></li>
+                    <li><a href="#" style="color:white ;">videos</a></li>
+                </ul>
+            </div>
+
+            <div class="lfor">
+                <h2><a href="#" style="color: white;">Health</a></h2>
+                <ul class="fl">
+                    <li><a href="#" style="color:white ;">life</a></li>
+                    <li><a href="#" style="color:white ;">Fitness</a></li>
+                    <li><a href="#" style="color: white;">mindfulness</a></li>
+                    <li><a href="#" style="color:white ;">sleep</a></li>
+                    <li><a href="#" style="color:white ;">relationship</a></li>
+                </ul>
+            </div>
+
+            <div class="lfiv">
+                <h2><a href="#" style="color: white;">Entertainment</a></h2>
+                <ul class="fl">
+                    <li><a href="#" style="color: white;">stars</a></li>
+                    <li><a href="#" style="color:white ;">screen</a></li>
+                    <li><a href="#" style="color:white ;">binge</a></li>
+                    <li><a href="#" style="color: white;">culture</a></li>
+                    <li><a href="#" style="color:white ;">media</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="fot-m">
+            <div class="lfi">
+                <h2><a href="#" style="color: white;">Tech</a></h2>
+                <ul class="fl">
+                    <li><a href="#" style="color: white;">gadget</a></li>
+                    <li><a href="#" style="color: white;">style</a></li>
+                    <li><a href="#" style="color: white;">arts</a></li>
+                    <li><a href="#" style="color: white;">innovate</a></li>
+                    <li><a href="#" style="color:white ;">upstarts</a></li>
+                    <li><a href="#" style="color:white ;">usa</a></li>
+                    <li><a href="#" style="color:white ;">maldives</a></li>
+                    <li><a href="#" style="color: white;">sa</a></li>
+                    <li><a href="#" style="color: white;">ireland</a></li>
+                </ul>
+            </div>
+
+                <div class="lse">
+                    <h2><a href="#" style="color: white;">style</a></h2>
+                    <ul class="fl">
+                        <li><a href="#" style="color:white ;">arts</a></li>
+                        <li><a href="#" style="color:white ;">design</a></li>
+                        <li><a href="#" style="color: white;">fashion</a></li>
+                        <li><a href="#" style="color: white;">architecture</a></li>
+                        <li><a href="#" style="color:white ;">beauty</a></li>
+                        <li><a href="#" style="color:white ;">video</a></li>
+                    </ul>
+                </div>
+
+                <div class="lth">
+                    <h2><a href="#" style="color: white;">travel</a></h2>
+                    <ul class="fl">
+                        <li><a href="#" style="color: white;">destination</a></li>
+                        <li><a href="#" style="color: white;">food</a></li>
+                        <li><a href="#" style="color:white ;">stay</a></li>
+                        <li><a href="#" style="color:white ;">news</a></li>
+                        <li><a href="#" style="color:white ;">video</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="lfort">
+                    <h2><a href="#" style="color: white;">travel</a></h2>
+                    <ul class="fl">
+                        <li><a href="#" style="color:white ;">destination</a></li>
+                        <li><a href="#" style="color:white ;">food</a></li>
+                        <li><a href="#" style="color: white;">stay</a></li>
+                        <li><a href="#" style="color:white ;">news</a></li>
+                        <li><a href="#" style="color: white;">video</a></li>
+                        
+                    </ul>
+                </div>
+        </div>
+
+        <div class="footer-soc">
+            <div class="fsi">
+                <div class="footbot">
+                    <div><h2 style="color: white;">Follow on</h2></div>
+                    <div>
+                        <img src="./Pics/download.jpeg" alt="" style="width: 4%;" >
+                        <img src="./Pics/download (1).png" alt="" style="width: 3%;" >
+                        <img src="./Pics/download (2).png" alt="" style="width: 3%;" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list one">
+            <ul style=" color:white;display: flex ; justify-content: space-around;">
+            <li>Newsletters</li>
+            <li>Transcripts</li>
+            <li>License Footage</li>
+            <li>sitemap</li>
+        </ul>
+        </div>
+
+
+        <div class="list three" style="margin: 1rem;">
+            <p style="color:white;">
+               &#169 2022 cable news network
+                a warner bros all rights reseved
+            </p>
+            <p style="color: white; margin:0.5rem;">
+                CNN Sans 2016 CNN 
+             </p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
